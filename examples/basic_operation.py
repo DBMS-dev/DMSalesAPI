@@ -6,6 +6,10 @@ api = DMSalesAPI(api_key='your-generated-api-key') # you can generate a new key 
 projects_list = api.project_list()
 print('MY PROJECTS LIST:\n:', projects_list, '\n')
 
+# download list of segments in your project
+segments_list = api.segment_list(project_id='paste-here-project-id-from-projects-list')
+print('MY SEGMENTS LIST:\n:', segments_list, '\n')
+
 # download list of your contacts in project
 contacts = api.persons_list(
     page=1,
