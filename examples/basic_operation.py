@@ -17,3 +17,11 @@ contacts = api.persons_list(
     project_id='paste-here-project-id-from-projects-list'
 )
 print('MY CONTACTS:\n', contacts, '\n')
+
+# add custom event
+api.add_custom_event(
+    project_id='paste-here-project-id-from-projects-list',
+    type='test-event',
+    email='paste-here-person-email-from-your-project',
+    custom={"test-field": "test-value"}
+)
