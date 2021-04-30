@@ -19,6 +19,7 @@ def load_persons_list_data(page: int, limit: int, **kwargs):
     :rtype: dict
     '''
     pages_count = math.ceil(ALL_PERSONS_COUNT / limit) # count how many pages api would return
+    # imitate limit value working as original (when less data than limit, loop filling data key will change range)
     data_objects_count = limit if limit <= ALL_PERSONS_COUNT else ALL_PERSONS_COUNT
     return {
         'all': ALL_PERSONS_COUNT,
@@ -31,8 +32,8 @@ def load_persons_list_data(page: int, limit: int, **kwargs):
                     'hidden': False,
                     'value': 'test-name'
                 }
-            } for i in range(data_objects_count)
-        ] if page <= pages_count else []
+            } for i in range(data_objects_count) # repeat this object X times (X depends on combination of given args)
+        ] if page <= pages_count else [] # imitate scenario when there are no more persons (you request page with no results) 
     }
     
 
