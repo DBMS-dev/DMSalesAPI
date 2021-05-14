@@ -10,6 +10,10 @@ print('MY PROJECTS LIST:\n:', projects_list, '\n')
 segments_list = api.segment_list(project_id='paste-here-project-id-from-projects-list')
 print('MY SEGMENTS LIST:\n:', segments_list, '\n')
 
+# download profiles and segments from project
+search_list = api.search_list(project_id='paste-here-project-id-from-projects-list')
+print('MY PROJECT PROFILES AND SEGMENTS:\n', search_list, '\n')
+
 # download list of your contacts in project
 contacts = api.persons_list(
     page=1,
