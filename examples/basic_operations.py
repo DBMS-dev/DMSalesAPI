@@ -83,3 +83,7 @@ print(f'Techscopeapi start response: {response}')
 #techscopeapi result
 response = api.techscopeapi_result(task_id='paste-here-task-id-from-start-techscopeapi-method')
 print(f'Techscopeapi result: {response}')
+
+#person call
+response = api.init_call(project_id='paste-here-project-id', base_key='paste-here-person-base-key')
+print(response)
