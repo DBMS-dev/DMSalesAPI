@@ -24,3 +24,14 @@ class APIOperations:
             logger.debug(f'DMSales API returned response {response}')
             logger.debug(f'Response message: {response.text}')
             return response.json()
+
+    def make_put_request(self, endpoint, data):
+        try:
+            logger.debug(f'Trying to make PUT request to endpoint {endpoint} with data {data}')
+            response = self.session.put(self.api_host + endpoint, json=data)
+        except Exception:
+            logger.exception('Error occured when making PUT request to DMSales API')
+        else:
+            logger.debug(f'DMSales API returned response {response}')
+            logger.debug(f'Response message: {response.text}')
+            return response.json()
