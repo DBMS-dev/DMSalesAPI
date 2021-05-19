@@ -75,3 +75,11 @@ print(f'My data: {response}')
 #my points
 response = api.my_points()
 print(f'My points: {response}')
+
+#techscopeapi start
+response = api.start_techscopeapi(www='empik.com')
+print(f'Techscopeapi start response: {response}')
+
+#techscopeapi result
+response = api.techscopeapi_result(task_id='paste-here-task-id-from-start-techscopeapi-method')
+print(f'Techscopeapi result: {response}')
