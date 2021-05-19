@@ -1,7 +1,7 @@
 import requests
 import logging
 
-from .endpoints import contacts, project, segment, events, search
+from .endpoints import contacts, project, segment, events, search, person
 
 logger = logging.getLogger(__name__)
 
@@ -10,7 +10,8 @@ class DMSalesAPI(
     contacts.ContactsEndpoints,
     segment.SegmentEndpoints,
     events.EventsEndpoints,
-    search.SearchEndpoints
+    search.SearchEndpoints,
+    person.PersonEndpoints
 ):
     
     api_host = 'https://app.dmsales.com'
