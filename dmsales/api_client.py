@@ -1,7 +1,7 @@
 import requests
 import logging
 
-from .endpoints import contacts, project, segment, events, search, person, user
+from .endpoints import contacts, project, segment, events, search, person, user, techscopeapi
 
 logger = logging.getLogger(__name__)
 
@@ -12,7 +12,8 @@ class DMSalesAPI(
     events.EventsEndpoints,
     search.SearchEndpoints,
     person.PersonEndpoints,
-    user.UserEndpoints
+    user.UserEndpoints,
+    techscopeapi.TechScopeApiEndpoints
 ):
     
     api_host = 'https://app.dmsales.com'
