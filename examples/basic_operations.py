@@ -87,3 +87,7 @@ print(f'Techscopeapi result: {response}')
 #person call
 response = api.init_call(project_id='paste-here-project-id', base_key='paste-here-person-base-key')
 print(response)
+
+#check call
+response = api.check_call(project_id='paste-here-project-id', call_id='paste-here-call-id')
+print(response)
