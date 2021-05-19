@@ -63,3 +63,7 @@ person_dict = {
 }
 response = api.add_person(id='test_id_1', project_id='paste-here-project-id-from-projects-list', person_dict=person_dict)
 print(f'Person endpoint response: {response}')
+
+#update person
+response = api.update_person(id='test_id_1', project_id='paste-here-project-id-from-projects-list', person_dict=person_dict)
+print(f'Person endpoint response: {response}')
