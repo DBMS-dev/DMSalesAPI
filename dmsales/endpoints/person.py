@@ -77,6 +77,21 @@ class PersonEndpoints(APIOperations):
         }
         return super().make_post_request(endpoint=endpoint, data=data)
 
-    def update_person(self):
-        pass
-        # put request
+    def update_person(self, id: str, project_id: str, person_dict: ProjectPerson):
+        '''
+        Updates person in project
+
+        :param id: person id
+        :type id: str
+        :param project_id: project id where person will be updated
+        :type project_id: str
+        :param person_dict: person_data
+        :type person_dict: ProjectPerson
+        '''
+        endpoint = '/api/persons/upsert'
+        data = {
+            'id': id,
+            'project_id': project_id,
+            'project_person': person_dict
+        }
+        return super().make_put_request(endpoint=endpoint, data=data)
