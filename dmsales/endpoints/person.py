@@ -95,3 +95,15 @@ class PersonEndpoints(APIOperations):
             'project_person': person_dict
         }
         return super().make_put_request(endpoint=endpoint, data=data)
+
+    def init_call(self, project_id: str, base_key: str):
+        '''
+        Initializes call to person from project
+
+        :param project_id: project id
+        :type project_id: str
+        :param base_key: person's base key
+        :type base_key: str
+        '''
+        params = {'project_id': project_id, 'base_key': base_key}
+        return super().make_post_request(endpoint='/api/persons/init-call', params=params)
