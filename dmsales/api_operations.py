@@ -14,10 +14,10 @@ class APIOperations:
             logger.debug(f'DMSales API returned response {response}')
             return response.json()
 
-    def make_post_request(self, endpoint, data):
+    def make_post_request(self, endpoint, data=None, **kwargs):
         try:
             logger.debug(f'Trying to make POST request to endpoint {endpoint} with data {data}')
-            response = self.session.post(self.api_host + endpoint, json=data)
+            response = self.session.post(self.api_host + endpoint, data=data, **kwargs)
         except Exception:
             logger.exception('Error occured when making POST request to DMSales API')
         else:
