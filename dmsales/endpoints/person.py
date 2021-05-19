@@ -107,3 +107,15 @@ class PersonEndpoints(APIOperations):
         '''
         params = {'project_id': project_id, 'base_key': base_key}
         return super().make_post_request(endpoint='/api/persons/init-call', params=params)
+
+    def check_call(self, project_id: str, call_id: str):
+        '''
+        Checks call status
+
+        :param project_id: project id
+        :type project_id: str
+        :param call_id: call id which status you want to check
+        :type call_id: str
+        '''
+        params = {'project_id': project_id, 'call_id': call_id}
+        return super().make_get_request(endpoint='/api/persons/check-call', **params)
