@@ -30,3 +30,36 @@ response = api.add_custom_event(
     custom={"test-field": "test-value"}
 )
 print(f'Custom event response: {response}')
+
+#add person
+person_dict = {
+    "tags": [
+        "tag1",
+        "tag2"
+    ],
+    "type": "b2b",
+    "address": {
+        "city": "Katowice",
+        "county": "Katowice",
+        "postal_code": "40-101",
+        "street": "Al. Piastów",
+        "street_number": "10",
+        "local_number": "35",
+        "voivodeship": "śląskie"
+    },
+    "personal_data": {
+        "name": "Nowy",
+        "surname": "Lead",
+        "company_name": "My Very First Company",
+        "position": "CEO"
+    },
+    "email": {
+        "raw": "exae-email@test.test"
+    },
+    "phone": {
+        "raw": "+48 123 456 678"
+    },
+    "sex": "kobieta"
+}
+response = api.add_person(id='test_id_1', project_id='paste-here-project-id-from-projects-list', person_dict=person_dict)
+print(f'Person endpoint response: {response}')
