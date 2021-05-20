@@ -27,4 +27,11 @@ def test_persons_list(test_dmsales_api, project_list_data):
         limit=10,
         project_id='6fdeda41-89e5-41c3-a419-bca38b61b701'
     ) == project_list_data
+    assert len(responses.calls) == 1
+    assert responses.calls[0].request.params == {
+        'page': '1',
+        'limit': '10',
+        'project_id': '6fdeda41-89e5-41c3-a419-bca38b61b701',
+        'paid_leads': 'true'
+    }
 
