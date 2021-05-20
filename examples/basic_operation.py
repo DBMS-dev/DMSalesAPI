@@ -1,7 +1,6 @@
 from dmsales import DMSalesAPI
 
 api = DMSalesAPI(api_key='your-generated-api-key') # you can generate a new key here https://app.dmsales.com/pl/panel/settings-account?settings=api-configuration
-api = DMSalesAPI(api_key='6053d5bd-5e98-43f9-b782-21c10af6144e', test=True)
 
 # download list of your projects
 projects_list = api.project_list()
@@ -42,3 +41,10 @@ report = api.validation_report(
     task_id='paste-here-generated-task-id'
 )
 print(f'VALIDATION REPORT:\n', report, '\n')
+
+# return details for given project_id and base_key
+response = api.get_contact_card(
+    project_id='1506ff30-69ec-4c31-9b09-21eb4a6460ad',
+    base_key='bazaMR_5272644702'
+)
+print(f'DETAILS FOR GIVEN BASE_KEY:\n', response, '\n')
