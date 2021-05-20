@@ -1,12 +1,4 @@
-from dmsales import DMSalesAPI
-
-import pytest
 import responses
-
-@pytest.fixture
-def test_dmsales_api():
-    api = DMSalesAPI(api_key='test123', test=True)
-    return api
 
 @responses.activate
 def test_project_list(test_dmsales_api):
