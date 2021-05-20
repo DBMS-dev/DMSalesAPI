@@ -1,6 +1,7 @@
 from dmsales import DMSalesAPI
 
 api = DMSalesAPI(api_key='your-generated-api-key') # you can generate a new key here https://app.dmsales.com/pl/panel/settings-account?settings=api-configuration
+api = DMSalesAPI(api_key='6053d5bd-5e98-43f9-b782-21c10af6144e', test=True)
 
 # download list of your projects
 projects_list = api.project_list()
@@ -26,3 +27,18 @@ response = api.add_custom_event(
     custom={"test-field": "test-value"}
 )
 print(f'Custom event response: {response}')
+
+# start validation data
+task_id = api.validation_start(
+    name='paste-here-name-to-validate',
+    phone='paste-here-phone-to-validate',
+    postal_code='paste-here-postal-code-to-validate',
+    email='paste-here-email-to-validate'
+)
+print(f'TASK ID:\n', task_id, '\n')
+
+# return validaion report
+report = api.validation_report(
+    task_id='paste-here-generated-task-id'
+)
+print(f'VALIDATION REPORT:\n', report, '\n')
