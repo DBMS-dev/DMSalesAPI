@@ -1,7 +1,7 @@
 import requests
 import logging
 
-from .endpoints import contacts, project, segment, events, validation
+from .endpoints import contacts, project, segment, events, validation, contact_card
 
 logger = logging.getLogger(__name__)
 
@@ -10,13 +10,17 @@ class DMSalesAPI(
     contacts.ContactsEndpoints,
     segment.SegmentEndpoints,
     events.EventsEndpoints,
-    validation.ValidationEndpoints
+    validation.ValidationEndpoints,
+    contact_card.CardEndpoints
 ):
     
     api_host = 'https://app.dmsales.com'
 
-    def __init__(self, api_key):
+    def __init__(self, api_key, test=False):
         self.api_key = api_key
+
+        if test is True:
+            self.api_host = 'http://dmsales.test.dmsales.com:8081'
 
         self.session = requests.Session()
         self.session.headers = {'Authorization': f'Bearer {api_key}'}
