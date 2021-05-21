@@ -1,4 +1,5 @@
 import logging
+import json
 
 from dmsales.api_operations import APIOperations
 
@@ -22,4 +23,4 @@ class EventsEndpoints(APIOperations):
 
         data = {k: v for k, v in data.items() if v} # exclude None args
         logger.debug('Calling add_custom_event method')
-        return super().make_post_request(endpoint, data=data)
+        return super().make_post_request(endpoint, json=data)
