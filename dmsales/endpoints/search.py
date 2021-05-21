@@ -16,4 +16,4 @@ class SearchEndpoints(APIOperations):
         :return: List of dicts with profiles and segments from project
         :rtype: List[Dict[str, str]]
         '''
-        return super().make_get_request('/api/search/list', project_id=project_id)
+        return super().make_get_request('/api/search/list', params={'project_id': project_id})

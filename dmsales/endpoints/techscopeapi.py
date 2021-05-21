@@ -25,5 +25,5 @@ class TechScopeApiEndpoints(APIOperations):
         :param task_id: task ID to check result (from start_techscopeapi method)
         :type task_id: str
         '''
-        return super().make_get_request(endpoint='/api/techscopeapi/result', task_id=task_id)
+        return super().make_get_request(endpoint='/api/techscopeapi/result', params={'task_id': task_id})
         

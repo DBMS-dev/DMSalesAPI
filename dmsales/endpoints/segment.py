@@ -20,6 +20,6 @@ class SegmentEndpoints(APIOperations):
         args_dict = {
             'project_id': project_id
         }
-        return super().make_get_request(endpoint, **args_dict)
+        return super().make_get_request(endpoint, params=args_dict)
         
     

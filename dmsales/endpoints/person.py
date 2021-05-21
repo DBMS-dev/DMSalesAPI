@@ -94,7 +94,7 @@ class PersonEndpoints(APIOperations):
             'project_id': project_id,
             'project_person': person_dict
         }
-        return super().make_put_request(endpoint=endpoint, data=data)
+        return super().make_put_request(endpoint=endpoint, json=data)
 
     def init_call(self, project_id: str, base_key: str):
         '''
@@ -118,4 +118,4 @@ class PersonEndpoints(APIOperations):
         :type call_id: str
         '''
         params = {'project_id': project_id, 'call_id': call_id}
-        return super().make_get_request(endpoint='/api/persons/check-call', **params)
+        return super().make_get_request(endpoint='/api/persons/check-call', params=params)
