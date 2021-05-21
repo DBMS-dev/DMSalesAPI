@@ -58,7 +58,7 @@ class ProjectPerson(TypedDict):
 
 class PersonEndpoints(APIOperations):
 
-    def add_person(self, id: Optional[str], project_id: str, person_dict: ProjectPerson):
+    def add_person(self, id: Optional[str], project_id: str, person_dict: ProjectPerson) -> Optional[dict]:
         '''
         Adds person to project
 
@@ -77,7 +77,7 @@ class PersonEndpoints(APIOperations):
         }
         return super().make_post_request(endpoint=endpoint, json=data)
 
-    def update_person(self, id: str, project_id: str, person_dict: ProjectPerson):
+    def update_person(self, id: str, project_id: str, person_dict: ProjectPerson) -> Optional[dict]:
         '''
         Updates person in project
 
@@ -96,7 +96,7 @@ class PersonEndpoints(APIOperations):
         }
         return super().make_put_request(endpoint=endpoint, json=data)
 
-    def init_call(self, project_id: str, base_key: str):
+    def init_call(self, project_id: str, base_key: str) -> Optional[dict]:
         '''
         Initializes call to person from project
 
@@ -108,7 +108,7 @@ class PersonEndpoints(APIOperations):
         params = {'project_id': project_id, 'base_key': base_key}
         return super().make_post_request(endpoint='/api/persons/init-call', params=params)
 
-    def check_call(self, project_id: str, call_id: str):
+    def check_call(self, project_id: str, call_id: str) -> Optional[dict]:
         '''
         Checks call status
 

@@ -1,4 +1,5 @@
 import logging
+from typing import Optional, List
 
 from dmsales.api_operations import APIOperations
 
@@ -7,14 +8,14 @@ logger = logging.getLogger(__name__)
 
 class SegmentEndpoints(APIOperations):
 
-    def segment_list(self, project_id: str):
+    def segment_list(self, project_id: str) -> Optional[List[dict]]:
         '''
         This call return segments from project
 
         :param project_id: ID from projects' list
         :type project_id: str
-        :return: segments list
-        :rtype: list
+        :return: segment list
+        :rtype: Optional[List[dict]]
         '''
         endpoint = '/api/segment/list'
         args_dict = {

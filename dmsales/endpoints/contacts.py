@@ -1,4 +1,5 @@
 import logging
+from typing import Optional
 
 from dmsales.api_operations import APIOperations
 
@@ -7,9 +8,9 @@ logger = logging.getLogger(__name__)
 
 class ContactsEndpoints(APIOperations):
 
-    def persons_list(self, page: int, limit: int, segment_id: str=None,
-                     project_id: str=None, sort: str=None, export_date_from: str=None,
-                     export_date_to: str=None, paid_leads='true'):
+    def persons_list(self, page: int, limit: int, segment_id: str = None,
+                     project_id: str = None, sort: str = None, export_date_from: str = None,
+                     export_date_to: str = None, paid_leads='true') -> Optional[dict]:
         '''
         This endpoint returns your project's contacts. You can filter by project or profile. 
         Additionaly, you can provide export dates to filter contacts from given period.
@@ -43,7 +44,7 @@ class ContactsEndpoints(APIOperations):
             'paid_leads': paid_leads
         }
 
-        args_dict = {k: v for k, v in args_dict.items() if v} # exclude None args
+        # exclude None args
+        args_dict = {k: v for k, v in args_dict.items() if v}
         logger.debug('Calling persons_list method')
         return super().make_get_request(endpoint, params=args_dict)
-        
