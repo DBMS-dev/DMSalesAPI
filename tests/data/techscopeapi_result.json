@@ -1,0 +1,37 @@
+{
+    "id": "4189397e-51fe-432d-9c4f-962642f27f9d",
+    "state": "done",
+    "reason": "",
+    "results": [
+        {
+            "id": "appsplay",
+            "name": "Apps Play",
+            "value": [],
+            "category": "Marketing"
+        },
+        {
+            "id": "googleplay",
+            "name": "Google Play",
+            "value": [],
+            "category": "Marketing"
+        },
+        {
+            "id": "ga",
+            "name": "Google Analytics",
+            "value": [],
+            "category": "Analytics"
+        },
+        {
+            "id": "gtm",
+            "name": "Google Tag Manager",
+            "value": [],
+            "category": "Tag Management"
+        },
+        {
+            "id": "hotjar",
+            "name": "Hotjar",
+            "value": [],
+            "category": "Marketing"
+        }
+    ]
+}
