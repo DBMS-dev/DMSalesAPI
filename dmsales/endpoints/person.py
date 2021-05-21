@@ -75,7 +75,7 @@ class PersonEndpoints(APIOperations):
             'project_id': project_id,
             'project_person': person_dict
         }
-        return super().make_post_request(endpoint=endpoint, data=data)
+        return super().make_post_request(endpoint=endpoint, json=data)
 
     def update_person(self, id: str, project_id: str, person_dict: ProjectPerson):
         '''

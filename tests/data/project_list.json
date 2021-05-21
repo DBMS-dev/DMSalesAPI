@@ -1,0 +1,199 @@
+{
+    "all": 1,
+    "total": 1,
+    "total_emails": 1,
+    "total_phones": 1,
+    "limit": 10,
+    "page": 1,
+    "totalFields": [
+        "name",
+        "surname",
+        "company",
+        "city",
+        "county",
+        "email",
+        "phone",
+        "type",
+        "community",
+        "street",
+        "postalCode",
+        "streetNumber",
+        "localNumber",
+        "voivodeshipNew",
+        "birthAge",
+        "pkd",
+        "pdkDescription",
+        "nip",
+        "regon",
+        "www",
+        "postalAddress",
+        "companyTrade",
+        "baseKey",
+        "notes",
+        "annualTurnoverEur",
+        "shareCapital",
+        "tags",
+        "position",
+        "contactStatus",
+        "paid",
+        "socialMediaProfile",
+        "createdAt",
+        "assignment"
+    ],
+    "availableFields": [
+        "name",
+        "surname",
+        "company",
+        "city",
+        "county",
+        "phone"
+    ],
+    "data": [
+        {
+            "name": {
+                "hidden": false,
+                "value": "Nowy"
+            },
+            "surname": {
+                "hidden": false,
+                "value": "Lead"
+            },
+            "company": {
+                "hidden": false,
+                "value": "My Very First Company"
+            },
+            "position": {
+                "hidden": false,
+                "value": "CEO"
+            },
+            "city": {
+                "hidden": false,
+                "value": "Katowice"
+            },
+            "county": {
+                "hidden": false,
+                "value": "Katowice"
+            },
+            "phone": {
+                "hidden": false,
+                "value": "123456678"
+            },
+            "email": {
+                "hidden": true,
+                "value": "exae-email@test.test"
+            },
+            "type": {
+                "hidden": false,
+                "value": "Firmy"
+            },
+            "community": {
+                "hidden": false,
+                "value": ""
+            },
+            "street": {
+                "hidden": false,
+                "value": "Al. Piastów"
+            },
+            "postalCode": {
+                "hidden": false,
+                "value": "40-101"
+            },
+            "streetNumber": {
+                "hidden": false,
+                "value": "10"
+            },
+            "localNumber": {
+                "hidden": false,
+                "value": "35"
+            },
+            "voivodeshipNew": {
+                "hidden": false,
+                "value": ""
+            },
+            "birthAge": {
+                "hidden": false,
+                "value": ""
+            },
+            "pkd": {
+                "hidden": false,
+                "value": ""
+            },
+            "pdkDescription": {
+                "hidden": false,
+                "value": ""
+            },
+            "nip": {
+                "hidden": false,
+                "value": ""
+            },
+            "regon": {
+                "hidden": false,
+                "value": ""
+            },
+            "www": {
+                "hidden": false,
+                "value": ""
+            },
+            "postalAddress": {
+                "hidden": false,
+                "value": "Al. Piastów 10/35, 40-101 Katowice"
+            },
+            "companyTrade": {
+                "hidden": false,
+                "value": ""
+            },
+            "annualTurnoverEur": {
+                "hidden": false,
+                "value": "-"
+            },
+            "shareCapital": {
+                "hidden": false,
+                "value": ""
+            },
+            "baseKey": {
+                "hidden": false,
+                "value": "bazaMR_0000000000"
+            },
+            "paid": {
+                "hidden": false,
+                "value": "Opłacony"
+            },
+            "notes": {
+                "hidden": false,
+                "value": []
+            },
+            "tags": {
+                "hidden": false,
+                "value": [
+                    "tag1",
+                    "tag2"
+                ]
+            },
+            "contactStatus": {
+                "hidden": false,
+                "value": {
+                    "id": 7,
+                    "name": "contact",
+                    "flag": "contact",
+                    "color": "#3c24c1",
+                    "should_be_translate": true,
+                    "updatedAt": "2021-05-20T13:33:00+0200"
+                }
+            },
+            "socialMediaProfile": {
+                "hidden": false,
+                "value": ""
+            },
+            "createdAt": {
+                "hidden": false,
+                "value": "2021-05-20"
+            },
+            "assignment": {
+                "hidden": false,
+                "value": []
+            }
+        }
+    ],
+    "sorting": [],
+    "query_string": null
+}
