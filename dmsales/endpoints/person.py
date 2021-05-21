@@ -1,5 +1,9 @@
 import logging
-from typing import Union, Dict, TypedDict, List, Optional
+from typing import Union, Dict, List, Optional
+try:
+    from typing import TypedDict
+except ImportError:
+    from typing_extensions import TypedDict
 
 from dmsales.api_operations import APIOperations
 
