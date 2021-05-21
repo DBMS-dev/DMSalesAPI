@@ -5,9 +5,8 @@ import responses
 import pytest
 
 @pytest.fixture
-def person():
-    test_data_path = Path('tests/data')
-    person_file_path = test_data_path / 'person.json'
+def person(tests_data_path):
+    person_file_path = tests_data_path / 'person.json'
     with open(person_file_path, 'r') as f:
         content = f.read()
         return json.loads(content)

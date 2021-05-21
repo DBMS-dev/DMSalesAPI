@@ -5,8 +5,7 @@ import responses
 import pytest
 
 @pytest.fixture
-def techscopeapi_result():
-    tests_data_path = Path('tests/data')
+def techscopeapi_result(tests_data_path):
     result_file_path = tests_data_path / 'techscopeapi_result.json'
     with open(result_file_path, 'r') as f:
         file_content = f.read()

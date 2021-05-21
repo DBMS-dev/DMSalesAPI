@@ -6,9 +6,8 @@ import pytest
 
 
 @pytest.fixture
-def project_list_data():
-    tests_directory_path = Path('tests/data')
-    file_path = tests_directory_path / 'project_list.json'
+def project_list_data(tests_data_path):
+    file_path = tests_data_path / 'project_list.json'
     with open(file_path, 'r') as file:
         data = file.read()
         return json.loads(data)
