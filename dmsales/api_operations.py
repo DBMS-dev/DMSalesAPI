@@ -17,6 +17,8 @@ class APIOperations:
 
         :param endpoint: only endpoint e.g. /api/persons/list
         :type endpoint: str
+        :raises exceptions.DMSalesAPIConnectionError: when there was a problem with api connection (timeouts) 
+        :raises Exception: unknown error
         :return: json response from api
         :rtype: dict
         '''
@@ -42,6 +44,8 @@ class APIOperations:
 
         :param endpoint: only endpoint e.g. /api/persons/list
         :type endpoint: str
+        :raises exceptions.DMSalesAPIConnectionError: when there was a problem with api connection (timeouts) 
+        :raises Exception: unknown error
         :return: json response from api
         :rtype: dict
         '''
@@ -67,6 +71,8 @@ class APIOperations:
 
         :param endpoint: only endpoint e.g. /api/persons/list
         :type endpoint: str
+        :raises exceptions.DMSalesAPIConnectionError: when there was a problem with api connection (timeouts) 
+        :raises Exception: unknown error
         :return: json response from api
         :rtype: dict
         '''
