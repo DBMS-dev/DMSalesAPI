@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='dmsales',
-    version='0.2.1',
+    version='0.2.2',
     description='DMSales API Python Client',
     long_description='DMSales API Python Client',
     url='https://app.dmsales.com/api-doc/default',
