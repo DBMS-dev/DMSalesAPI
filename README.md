@@ -1,4 +1,6 @@
 # DMSalesAPI
+[![Upload Python Package](https://github.com/DBMS-dev/DMSalesAPI/actions/workflows/python-publish.yml/badge.svg)](https://github.com/DBMS-dev/DMSalesAPI/actions/workflows/python-publish.yml)
+
 Python library implementing DMSales API methods
 
 [Official API Documentation](https://app.dmsales.com/api-doc/default)
