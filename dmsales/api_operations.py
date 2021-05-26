@@ -5,7 +5,7 @@ import requests.exceptions
 from . import exceptions
 
 logger = logging.getLogger(__name__)
-DEFAULT_TIMEOUT = 10
+DEFAULT_TIMEOUT = 1
 class APIOperations:
     '''
     Handling requests
@@ -32,7 +32,7 @@ class APIOperations:
                 requests.exceptions.ReadTimeout) as e:
             logger.exception('DMSales API connection timeout')
             raise exceptions.DMSalesAPIConnectionError(DEFAULT_TIMEOUT)
-        except Exception:
+        except Exception as e:
             raise e
         else:
             logger.debug(f'DMSales API returned response {response}')
@@ -58,7 +58,7 @@ class APIOperations:
         except (requests.exceptions.ConnectTimeout,
                 requests.exceptions.ReadTimeout) as e:
             raise exceptions.DMSalesAPIConnectionError(DEFAULT_TIMEOUT)
-        except Exception:
+        except Exception as e:
             raise e
         else:
             logger.debug(f'DMSales API returned response {response}')
@@ -85,7 +85,7 @@ class APIOperations:
         except (requests.exceptions.ConnectTimeout,
                 requests.exceptions.ReadTimeout) as e:
             raise exceptions.DMSalesAPIConnectionError(DEFAULT_TIMEOUT)
-        except Exception:
+        except Exception as e:
             raise e
         else:
             logger.debug(f'DMSales API returned response {response}')
