@@ -1,7 +1,11 @@
 import logging
 
-logger = logging.getLogger(__name__)
+import requests.exceptions
 
+from . import exceptions
+
+logger = logging.getLogger(__name__)
+DEFAULT_TIMEOUT = 10
 class APIOperations:
     '''
     Handling requests
@@ -18,9 +22,16 @@ class APIOperations:
         '''
         try:
             logger.debug(f'Trying to make GET request to endpoint {endpoint} with query kwargs {kwargs}')
-            response = self.session.get(self.api_host + endpoint, **kwargs)
+            if 'timeout' in kwargs:
+                response = self.session.get(self.api_host + endpoint, **kwargs)
+            else:
+                response = self.session.get(self.api_host + endpoint, timeout=DEFAULT_TIMEOUT, **kwargs)
+        except (requests.exceptions.ConnectTimeout,
+                requests.exceptions.ReadTimeout) as e:
+            logger.exception('DMSales API connection timeout')
+            raise exceptions.DMSalesAPIConnectionError(DEFAULT_TIMEOUT)
         except Exception:
-            logger.exception('Error occured when making GET request to DMSales API')
+            raise e
         else:
             logger.debug(f'DMSales API returned response {response}')
             return response.json()
@@ -36,9 +47,15 @@ class APIOperations:
         '''
         try:
             logger.debug(f'Trying to make POST request to endpoint {endpoint} with kwargs {kwargs}')
-            response = self.session.post(self.api_host + endpoint, **kwargs)
+            if 'timeout' in kwargs:
+                response = self.session.post(self.api_host + endpoint, **kwargs)
+            else:
+                response = self.session.post(self.api_host + endpoint, timeout=DEFAULT_TIMEOUT, **kwargs)
+        except (requests.exceptions.ConnectTimeout,
+                requests.exceptions.ReadTimeout) as e:
+            raise exceptions.DMSalesAPIConnectionError(DEFAULT_TIMEOUT)
         except Exception:
-            logger.exception('Error occured when making POST request to DMSales API')
+            raise e
         else:
             logger.debug(f'DMSales API returned response {response}')
             logger.debug(f'Response message: {response.text}')
@@ -55,9 +72,15 @@ class APIOperations:
         '''
         try:
             logger.debug(f'Trying to make PUT request to endpoint {endpoint} with kwargs {kwargs}')
-            response = self.session.put(self.api_host + endpoint, **kwargs)
+            if 'timeout' in kwargs:
+                response = self.session.put(self.api_host + endpoint, **kwargs)
+            else:
+                response = self.session.put(self.api_host + endpoint, timeout=DEFAULT_TIMEOUT, **kwargs)
+        except (requests.exceptions.ConnectTimeout,
+                requests.exceptions.ReadTimeout) as e:
+            raise exceptions.DMSalesAPIConnectionError(DEFAULT_TIMEOUT)
         except Exception:
-            logger.exception('Error occured when making PUT request to DMSales API')
+            raise e
         else:
             logger.debug(f'DMSales API returned response {response}')
             logger.debug(f'Response message: {response.text}')
