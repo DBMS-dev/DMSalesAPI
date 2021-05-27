@@ -11,7 +11,7 @@ class DMSalesAPI(
     segment.SegmentEndpoints,
     events.EventsEndpoints,
     validation.ValidationEndpoints,
-    contact_card.CardEndpoints
+    contact_card.ContactCardEndpoints
 ):
     
     api_host = 'https://app.dmsales.com'
