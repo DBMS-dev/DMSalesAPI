@@ -1,7 +1,7 @@
 import requests
 import logging
 
-from .endpoints import contacts, project, segment, events, validation, contact_card
+from .endpoints import contacts, project, segment, events, search, person, user, techscopeapi, validation, contact_card
 
 logger = logging.getLogger(__name__)
 
@@ -10,13 +10,25 @@ class DMSalesAPI(
     contacts.ContactsEndpoints,
     segment.SegmentEndpoints,
     events.EventsEndpoints,
+    search.SearchEndpoints,
+    person.PersonEndpoints,
+    user.UserEndpoints,
+    techscopeapi.TechScopeApiEndpoints,
     validation.ValidationEndpoints,
     contact_card.ContactCardEndpoints
 ):
     
     api_host = 'https://app.dmsales.com'
 
-    def __init__(self, api_key, test=False):
+    def __init__(self, api_key: str, test: bool=False):
+        '''
+        Main class to manipulate DMSales API with all implemented methods
+
+        :param api_key: dmsales api key https://app.dmsales.com/pl/panel/settings-account?settings=api-configuration
+        :type api_key: str
+        :param test: dmsales api test environment, defaults to False
+        :type test: bool, optional
+        '''
         self.api_key = api_key
 
         if test is True:
