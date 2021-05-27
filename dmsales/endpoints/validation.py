@@ -42,7 +42,7 @@ class ValidationEndpoints(APIOperations):
 
         data = {k: v for k, v in data.items() if v['value']} # exclude None args
         logger.debug('Calling validation_start method')
-        return super().make_post_request(endpoint, data=data)
+        return super().make_post_request(endpoint, json=data)
 
     def validation_report(self, task_id: str):
         '''
@@ -60,4 +60,4 @@ class ValidationEndpoints(APIOperations):
         }
 
         logger.debug('Calling validation_report method')
-        return super().make_get_request(endpoint, **args_dict)
+        return super().make_get_request(endpoint, params=args_dict)
