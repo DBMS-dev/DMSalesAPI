@@ -102,7 +102,7 @@ response = api.validation_start(
 print('Task ID\n:', response, '\n')
 
 #download validation report
-response = api.validation_start(
+response = api.validation_report(
     task_id='paste-here-task-id'
 )
 print(f'Validation report:\n', response, '\n')
