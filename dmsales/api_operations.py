@@ -5,7 +5,7 @@ import requests.exceptions
 from . import exceptions
 
 logger = logging.getLogger(__name__)
-DEFAULT_TIMEOUT = 10
+DEFAULT_TIMEOUT = 30
 class APIOperations:
     '''
     Handling requests
