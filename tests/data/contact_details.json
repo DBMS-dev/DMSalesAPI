@@ -1,0 +1,242 @@
+{
+    "person":{
+        "name":"",
+        "surname":"",
+        "company":"DBMS SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+        "company_trade":"",
+        "nip":"5272644702",
+        "phone":{
+            "value":"533950170",
+            "exists":true,
+            "blocked":false,
+            "live_call_cost":130,
+            "free_live_call":false,
+            "show_live_call_button":true
+        },
+        "email":"tomasz.dziobiak@dmsales.com",
+        "type":"b2b",
+        "www":"",
+        "community":"",
+        "city":"Warszawa",
+        "street":"Gwiaździsta",
+        "postal_code":"01-651",
+        "street_number":"71",
+        "local_number":"10",
+        "voivodeship":"mazowieckie",
+        "birth_age":"",
+        "position":"",
+        "socials":{
+            "linkedin":""
+        },
+        "paid":true,
+        "workers":[
+            
+        ],
+        "employers":[
+            
+        ],
+        "referScore":{
+            "paid":true,
+            "applicable":true,
+            "data":{
+                "nip":"5272644702"
+            }
+        }
+    },
+    "tags":[
+        
+    ],
+    "contact_status":{
+        "id":7,
+        "name":"contact",
+        "flag":"contact",
+        "color":"#3c24c1",
+        "should_be_translate":true,
+        "updatedAt":"2021-05-19T13:19:07+0200"
+    },
+    "assignment":[
+        
+    ],
+    "notes":{
+        "2021-05-27 18:41:14":{
+            "uuid":"8d3af988-e985-4eec-bcf2-0b5b089fb5bf",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"27.05.2021 18:41",
+            "updated_at":"27.05.2021 18:41"
+        },
+        "2021-05-27 18:04:19":{
+            "uuid":"6096328d-1196-45c8-ae9b-c7f393eeffce",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"27.05.2021 18:04",
+            "updated_at":"27.05.2021 18:04"
+        },
+        "2021-05-27 18:03:40":{
+            "uuid":"8aac761b-06e2-409e-8133-848b2856517e",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"27.05.2021 18:03",
+            "updated_at":"27.05.2021 18:03"
+        },
+        "2021-05-27 15:57:05":{
+            "uuid":"8200018c-548b-4f10-b21b-ed6446923249",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"27.05.2021 15:57",
+            "updated_at":"27.05.2021 15:57"
+        },
+        "2021-05-27 15:31:59":{
+            "uuid":"c294edd6-d1af-45cb-b010-02fc49cda77a",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"27.05.2021 15:31",
+            "updated_at":"27.05.2021 15:31"
+        },
+        "2021-05-27 15:04:04":{
+            "uuid":"a0b895b6-9770-4980-a9f5-87603a7e5a0d",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"27.05.2021 15:04",
+            "updated_at":"27.05.2021 15:04"
+        },
+        "2021-05-27 14:44:21":{
+            "uuid":"d1f12fd0-e479-4134-aef9-558b3b8aea51",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"27.05.2021 14:44",
+            "updated_at":"27.05.2021 14:44"
+        },
+        "2021-05-27 14:43:58":{
+            "uuid":"9af94a10-e894-4a23-b1ff-b96c9a996127",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"27.05.2021 14:43",
+            "updated_at":"27.05.2021 14:43"
+        },
+        "2021-05-27 14:35:55":{
+            "uuid":"3a21b3b0-6e81-4570-ae48-878bfadaabaf",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"27.05.2021 14:35",
+            "updated_at":"27.05.2021 14:35"
+        },
+        "2021-05-27 14:32:40":{
+            "uuid":"2c4eb912-a2b9-4ddc-b335-0690e6c8f522",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"27.05.2021 14:32",
+            "updated_at":"27.05.2021 14:32"
+        },
+        "2021-05-27 09:23:48":{
+            "uuid":"063f5c27-2ead-4ae3-beb3-9adc40f797c4",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"27.05.2021 09:23",
+            "updated_at":"27.05.2021 09:23"
+        },
+        "2021-05-27 09:23:47":{
+            "uuid":"65d8fecd-036c-42fb-9756-0a3e567d1dc1",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"27.05.2021 09:23",
+            "updated_at":"27.05.2021 09:23"
+        },
+        "2021-05-27 09:23:46":{
+            "uuid":"2441e7f8-55cd-420b-b001-bea8d637bff9",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"27.05.2021 09:23",
+            "updated_at":"27.05.2021 09:23"
+        },
+        "2021-05-27 09:08:43":{
+            "uuid":"fde4313e-0f45-42f1-8295-89fb44081610",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"27.05.2021 09:08",
+            "updated_at":"27.05.2021 09:08"
+        },
+        "2021-05-26 11:51:05":{
+            "uuid":"2e43e2c9-8f78-484a-b111-47a12081fb41",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"26.05.2021 11:51",
+            "updated_at":"26.05.2021 11:51"
+        },
+        "2021-05-26 11:08:36":{
+            "uuid":"e18064a8-a659-4386-bde8-02ea8b9e6d5d",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"26.05.2021 11:08",
+            "updated_at":"26.05.2021 11:08"
+        },
+        "2021-05-26 11:03:59":{
+            "uuid":"e5546935-2b9f-4728-8cc7-4c0215e177f7",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"26.05.2021 11:03",
+            "updated_at":"26.05.2021 11:03"
+        },
+        "2021-05-21 09:59:28":{
+            "uuid":"c5fa5db1-b416-49dc-89e5-71316a309c7f",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"Testowa wiadomość",
+            "created_at":"21.05.2021 09:59",
+            "updated_at":"21.05.2021 09:59"
+        },
+        "2021-05-21 09:56:49":{
+            "uuid":"41870c3e-ac84-4204-a8dc-7267eefb892e",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"21.05.2021 09:56",
+            "updated_at":"21.05.2021 09:56"
+        },
+        "2021-05-21 09:55:47":{
+            "uuid":"74d84bc9-b80a-4e7a-ab47-92439cd07aa7",
+            "project":356,
+            "user":176,
+            "tag":"None",
+            "content":"This is message from python client",
+            "created_at":"21.05.2021 09:55",
+            "updated_at":"21.05.2021 09:55"
+        }
+    }
+}
