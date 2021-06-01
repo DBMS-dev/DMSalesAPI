@@ -36,6 +36,5 @@ def test_contact_card_add_note(test_dmsales_api):
     assert test_dmsales_api.contact_card_add_note(
         project_id='123',
         base_key='bazaMR_123',
-        content='test message',
-        tag='test tag'
+        content='test message'
     ) == 'ok'
