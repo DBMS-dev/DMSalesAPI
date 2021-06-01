@@ -28,7 +28,7 @@ class ContactCardEndpoints(APIOperations):
         logger.debug('Calling contact_card details method')
         return super().make_get_request(endpoint, params=args_dict)
 
-    def contact_card_add_note(self, project_id: str, base_key: str, content: str, tag: str):
+    def contact_card_add_note(self, project_id: str, base_key: str, content: str):
         '''
         Adds note to contact for given project_id and base_key.
 
@@ -47,8 +47,7 @@ class ContactCardEndpoints(APIOperations):
         data = {
             'project_id': project_id,
             'base_key': base_key,
-            'content': content,
-            'tag': tag
+            'content': content
         }
 
         data = {k: v for k, v in data.items() if v} # exclude None args
