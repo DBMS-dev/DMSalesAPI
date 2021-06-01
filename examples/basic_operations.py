@@ -118,7 +118,6 @@ print(f'Contact details:\n', response, '\n')
 response = api.contact_card_add_note(
     project_id='paste-here-project-id',
     base_key='paste-here-base-key',
-    content='paste-here-content-of-note',
-    tag='paste-here-tag-of-note'
+    content='paste-here-content-of-note'
 )
 print(f'Add note response: {response}')
