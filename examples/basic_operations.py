@@ -91,3 +91,33 @@ print(response)
 #check call
 response = api.check_call(project_id='paste-here-project-id', call_id='paste-here-call-id')
 print(response)
+
+#start validation data
+response = api.validation_start(
+    name='paste-here-name-to-validate',
+    phone='paste-here-phone-to-validate',
+    postal_code='paste-here-postal-code-to-validate',
+    email='paste-here-email-to-validate'
+)
+print('Task ID\n:', response, '\n')
+
+#download validation report
+response = api.validation_report(
+    task_id='paste-here-task-id'
+)
+print(f'Validation report:\n', response, '\n')
+
+#download details about contact
+response = api.contact_card_details(
+    project_id='paste-here-project-id',
+    base_key='paste-here-base-key'
+)
+print(f'Contact details:\n', response, '\n')
+
+#add note to the contact
+response = api.contact_card_add_note(
+    project_id='paste-here-project-id',
+    base_key='paste-here-base-key',
+    content='paste-here-content-of-note'
+)
+print(f'Add note response: {response}')
